@@ -23,7 +23,7 @@ def recommend(movie):
     for i in similar_movies:
         recommended_movies.append(movies.iloc[i].title)
 
-    return recommended_movies recommended_movies
+    return recommended_movies 
 
 
 # Streamlit UI
