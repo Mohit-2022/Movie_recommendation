@@ -49,9 +49,9 @@ def recommend(movie):
     recommended_posters = []
 
     for i in movie_list:
-        title = movies.iloc[i[0]].title
-        recommended_movies.append(title)
-        recommended_posters.append(fetch_poster(title))
+        movie_id=movies.iloc[i[0]].movie_id
+        recommended_movies.append(movies.iloc[i[0]].title)
+        recommended_posters.append(fetch_poster(movie_id))
 
     return recommended_movies, recommended_posters
 
