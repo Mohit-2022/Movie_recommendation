@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 import pandas as pd
-import requests
+
 
 st.markdown("""
 <style>
@@ -22,18 +22,6 @@ movies = pd.DataFrame(movies_dict)
 
 similarity = pickle.load(open('similarity.pkl','rb'))
 
-def fetch_poster(movie_id):
-    import requests
-    url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=YOUR_API_KEY&language=en-US"
-    data = requests.get(url).json()
-
-    poster_path = data.get('poster_path')
-
-    if poster_path is None:
-        return "https://via.placeholder.com/300x450?text=No+Poster"
-
-    full_path = "https://image.tmdb.org/t/p/w500/" + poster_path
-    return full_path
 
 # Recommendation Function
 def recommend(movie):
@@ -45,14 +33,12 @@ def recommend(movie):
                          key=lambda x: x[1])[1:6]
 
     recommended_movies = []
-    recommended_posters = []
 
     for i in movies_list:
         movie_id = movies.iloc[i[0]].movie_id
         recommended_movies.append(movies.iloc[i[0]].title)
-        recommended_posters.append(fetch_poster(movie_id))
 
-    return recommended_movies, recommended_posters
+    return recommended_movies
 
 # Streamlit UI
 st.markdown('<p class="big-font">🎬 Movie Recommendation System</p>', unsafe_allow_html=True)
@@ -63,11 +49,10 @@ selected_movie_name = st.selectbox(
 )
 
 if st.button("Recommend"):
-    names, posters = recommend(selected_movie_name)
+    names = recommend(selected_movie_name)
 
     cols = st.columns(5)
 
     for idx in range(len(names)):
         with cols[idx]:
-            st.image(posters[idx])
             st.text(names[idx])
