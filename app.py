@@ -10,23 +10,18 @@ similarity = pickle.load(open('similarity.pkl','rb'))
 
 # Recommendation Function
 def recommend(movie):
-    
+
     if movie not in movies['title'].values:
         return ["Movie not found"]
 
     movie_index = movies[movies['title'] == movie].index[0]
-    distances = similarity[movie_index]
 
-    movie_list = sorted(
-        list(enumerate(distances)),
-        reverse=True,
-        key=lambda x: x[1]
-    )[1:6]
+    similar_movies = similarity[movie_index]
 
     recommended_movies = []
 
-    for i in movie_list:
-        recommended_movies.append(movies.iloc[i[0]].title)
+    for i in similar_movies:
+        recommended_movies.append(movies.iloc[i].title)
 
     return recommended_movies
 
