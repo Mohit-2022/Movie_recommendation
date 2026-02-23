@@ -76,8 +76,22 @@ The model has been deployed as a web application using Streamlit Cloud.
 
 **6. Project Structure**
 
+    movies_dict.pkl         → Model
+    similarity.pkl          → Similarity model
+    app.py                  → Streamlit application  
+    requirements.txt        → Dependencies  
+    README.md               → Project documentation
+ 
+**7. Tech Stack**
 
-**7. Business Use Case**
+    Python
+    Pandas
+    NLTK
+    Similarity Cosine
+    Streamlit
+    Pickle
+
+**8. Business Use Case**
 
   This type of recommendation engine can be used by:
 
