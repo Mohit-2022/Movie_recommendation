@@ -12,13 +12,13 @@
   ✔ Model Seriallization
   ✔ Web app deployment using Streamlit
 
-**2. Problem Statement**
+**1. Problem Statement**
 
   With the exponential growth of content on OTT platforms, users often face difficulty in selecting relevant movies based 
   on their preferences. This system helps users discover movies similar to the one they like by analyzing movie metadata 
   and computing similarity between movies.
 
-**3. Project Workflow**
+**2. Project Workflow**
 
   a) Data Collection
   
@@ -58,7 +58,7 @@
         
         Users select a movie and receive top 5 similar movie recommendations
 
-**4. Machine Learning Concepts Used**
+**3. Machine Learning Concepts Used**
     
   a) NLP based Feature Engineering
     
@@ -70,11 +70,11 @@
     
   e) Recommendation Systems
 
-**5. Deployment**
+**4. Deployment**
 
 The model has been deployed as a web application using Streamlit Cloud.
 
-**6. Project Structure**
+**5. Project Structure**
 
     movies_dict.pkl         → Model
     similarity.pkl          → Similarity model
@@ -82,7 +82,7 @@ The model has been deployed as a web application using Streamlit Cloud.
     requirements.txt        → Dependencies  
     README.md               → Project documentation
  
-**7. Tech Stack**
+**6. Tech Stack**
 
     Python
     Pandas
@@ -91,7 +91,7 @@ The model has been deployed as a web application using Streamlit Cloud.
     Streamlit
     Pickle
 
-**8. Business Use Case**
+**7. Business Use Case**
 
   This type of recommendation engine can be used by:
 
