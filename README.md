@@ -106,7 +106,7 @@ The model has been deployed as a web application using Streamlit Cloud.
     to improve user engagement and retention
 
 
-Live App:
+[Click Here to Use Live App]
 https://movierecommendation-f6iusaguhkv6riu34zsycs.streamlit.app/
 
 
