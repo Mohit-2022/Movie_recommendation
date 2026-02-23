@@ -1,4 +1,4 @@
-                                      **Movie Recommendation System (End-to-End ML Project)**
+                                    **Movie Recommendation System (End-to-End ML Project)**
 
   This project is an end-to-end Content-Based Movie Recommendation System that suggests similar movies to users based 
   on movie metadata such as genre, keywords, cast, crew, and overview.
